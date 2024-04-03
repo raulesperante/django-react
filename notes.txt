@@ -1,0 +1,39 @@
+Los paquetes se guardan en venv
+
+Python select interpreter
+y seleccionar venv Para que ejecute el entorno virtual
+
+pip install django
+django-admin startproject django_api .
+python manage.py runserver
+
+Crear una aplicación
+python manage.py startapp tasks
+Poner el nombre de la aplicación en INSTALLED_APPS
+Crea todas las tablas que necesita el proyecto para funcionar
+python manage.py migrate
+
+Módulo django rest framework
+pip install djangorestframework
+
+Módulo de cors
+pip install django-cors-headers
+
+Crear las migraciones
+python manage.py makemigrations tasks
+
+Crear superusuario
+python manage.py createsuperuser 
+user: raul
+email: ragusmat@gmail.com
+admin1234
+
+Así se agrega una entidad al panel administrador
+from django.contrib import admin
+from .models import Task
+
+# Register your models here.
+admin.site.register(Task)
+
+#serializer
+#coreapi es para autodocumentar
